@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.container {
+    margin: 50px 100px;
+}

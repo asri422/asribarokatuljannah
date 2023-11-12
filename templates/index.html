@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rumahmakan</title>
+  <title>PENMU</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-   <h1>Rumah makan asri</h1>
-    <p>rumah makan asri tersedia menu makanan yang lezat 1.ceker ngompol pedas 2.ayam pettok pedas 3.kepala penyek pedas minuman 1. es manisku 2. es teh toyota 3. es buah .</p>
+  <header>
+    <h1>selamat datang</h1>
+    <h2>di pena miftahul ulum </h2>
+    <h3>selamat membaca</h3>
+  </header>
 
+  <nav>
+    <body style="background-color: aqua;"></body>
+    <ul>
+        <li><a href="{% url 'penmu' %}">artikel</a></li>
+        <li><a href="{% url 'opini' %}">opini</a></li>
+        <li><a href="{% url 'puisi' %}">puisi</a></li>
+        <li><a href="{% url 'aboutme' %}">aboutme</a></li>
+    </ul>
+  </nav>
 
-    <h1 style="background-color:powderblue;">This is a heading</h1>
-    <p style="background-color:tomato;">This is a paragraph.</p>
+  <section>
+    <div class="artikel-container">
+      {% for item in artikel %}
+        <div class="artikel">
+          <h3>{{ item.judul }}</h3>
+          <p>{{ item.konten }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <footer>
+    <p>terima kasih</p>
+  </footer>
 </body>
 </html>
